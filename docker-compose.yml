@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+       POSTGRES_DB: nodb1
+       POSTGRES_USER: myuser
+       POSTGRES_PASSWORD: mypassword
+ 
+  another-db:
+      image: postgres
+      restart: always
+      ports:
+        - "5433:5432"
+      environment:
+        POSTGRES_DB: nodb2
+        POSTGRES_USER: myuser
+        POSTGRES_PASSWORD: mypassword
+     
+
